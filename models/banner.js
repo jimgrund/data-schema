@@ -4,6 +4,11 @@ const Joi = require('joi');
 const mutate = require('../lib/mutate');
 
 const MODEL = {
+    id: Joi
+        .number()
+        .integer()
+        .positive(),
+
     message: Joi
         .string()
         .max(512)
